@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 可以导入别的配置文件，使用时直接使用该配置文件，但重名的属性会被后置的配置文件自动覆盖 -->
+    <import resource="../beans1.xml"/>
+    <import resource="../beans2.xml"/>
+    <import resource="../beans3.xml"/>
+
+</beans>

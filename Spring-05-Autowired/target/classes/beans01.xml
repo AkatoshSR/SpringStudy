@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+               https://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="cat111" class="com.sqx.pojo.Cat"/>
+    <bean id="dog111" class="com.sqx.pojo.Dog"/>
+
+    <!-- byName：会自动在上下文中寻找，和自己对象set方法后面值对应的bean的id，进行自动装配，缺点是bean的id必须和set后名字一致 -->
+    <!-- byType：会自动在上下文中寻找，和自己对象set方法后面值对应的bean的id，进行自动装配，缺点是不能识别多个相同的class -->
+<!--    <bean id="people" class="com.sqx.pojo.People" autowire="byName">-->
+<!--        <property name="name" value="sqx"/>-->
+<!--    </bean>-->
+
+    <bean id="people" class="com.sqx.pojo.People"/>
+
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.sqx.pojo.User">
+
+        <!-- 第一种下标赋值 -->
+        <!--<constructor-arg index="0" value="index"/>-->
+
+        <!-- 第二种方式，通过类型创建对象，不建议使用 -->
+        <!--<constructor-arg type="java.lang.String" value="type"/>-->
+
+        <!-- 第三种方式，直接通过方式名创建 -->
+        <constructor-arg name="name" value="sqx"/>
+
+        <!--<property name="name" value="sqx"/>-->
+    </bean>
+
+    <!--
+        id：bean的唯一标识符，也就是相当于对象名
+        class：bean对象所对应的全限定名，包名+类名
+        name：和alias一样是别名，而且可以取多个别名，可用空格、逗号、分号分割
+     -->
+    <bean id="userT" class="com.sqx.pojo.UserT" name="u2 us2;use2,userT2">
+        <constructor-arg name="name" value="sqx"/>
+    </bean>
+
+    <!-- 别名，可通过别名来获取对象 -->
+    <alias name="user" alias="u"/>
+
+</beans>
