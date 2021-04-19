@@ -13,9 +13,13 @@
         <module name="Spring-02-hellospring" />
         <module name="Spring-07-appconfig" />
         <module name="Spring-04-di" />
+        <module name="Spring-09-aop" />
         <module name="Spring-06-anno" />
         <module name="Spring-08-proxy-reflection" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Spring-10-mybatis" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
